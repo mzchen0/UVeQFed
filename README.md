@@ -9,10 +9,12 @@ To run MINSTIID.m or MINSTnonIID.m, one must put all the code files into one fol
 
 
 CIFAR is used for image identification.  One can change the data distribution using our predefined function GetUnbalancedCIFAR.m. Before running the code CIFAR.m, one must first run the code DownloadCIFAR10.m to downlowd the dataset of CIFAR. After that, one must run the code 
-% if ~exist('cifar10Train','dir')
-%     disp('Saving the Images in folders. This might take some time...');    
-%     saveCIFAR10AsFolderOfImages('cifar-10-batches-mat', pwd, true);
-% end
+
+if ~exist('cifar10Train','dir')
+     disp('Saving the Images in folders. This might take some time...');    
+     saveCIFAR10AsFolderOfImages('cifar-10-batches-mat', pwd, true);
+end
+
 to classify the CIFAR dataset. Then, one can directly run the code CIFAR.m. 
 
 
